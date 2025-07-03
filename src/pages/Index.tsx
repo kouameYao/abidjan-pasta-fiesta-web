@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import FestivalHeader from "@/components/FestivalHeader";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ProgramSection from "@/components/ProgramSection";
+import ChefsSection from "@/components/ChefsSection";
+import TicketsSection from "@/components/TicketsSection";
+import InfoSection from "@/components/InfoSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <FestivalHeader />
+      <HeroSection />
+      <AboutSection />
+      <ProgramSection />
+      <ChefsSection />
+      <TicketsSection />
+      <InfoSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
