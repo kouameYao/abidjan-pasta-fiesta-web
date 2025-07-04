@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/festival-hero.jpg";
 
 const HeroSection = () => {
@@ -45,9 +46,11 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="festival" size="lg" className="text-lg px-8 py-4">
-            Réserver vos billets
-          </Button>
+          <Link to="/reservation">
+            <Button variant="festival" size="lg" className="text-lg px-8 py-4">
+              Réserver vos billets
+            </Button>
+          </Link>
           <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-black">
             Découvrir le programme
           </Button>

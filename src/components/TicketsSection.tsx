@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Users, Ticket } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TicketsSection = () => {
   const tickets = [
@@ -98,13 +99,15 @@ const TicketsSection = () => {
                   ))}
                 </ul>
 
-                <Button 
-                  variant={ticket.popular ? "festival" : "outline"} 
-                  className="w-full mt-6"
-                  size="lg"
-                >
-                  Réserver maintenant
-                </Button>
+                <Link to="/reservation">
+                  <Button 
+                    variant={ticket.popular ? "festival" : "outline"} 
+                    className="w-full mt-6"
+                    size="lg"
+                  >
+                    Réserver maintenant
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}

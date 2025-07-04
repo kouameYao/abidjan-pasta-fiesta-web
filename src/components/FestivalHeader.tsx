@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const FestivalHeader = () => {
@@ -33,9 +34,11 @@ const FestivalHeader = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="festival" size="sm">
-              Réserver
-            </Button>
+            <Link to="/reservation">
+              <Button variant="festival" size="sm">
+                Réserver
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -61,9 +64,11 @@ const FestivalHeader = () => {
               </a>
             ))}
             <div className="pt-4">
-              <Button variant="festival" size="sm" className="w-full">
-                Réserver
-              </Button>
+              <Link to="/reservation">
+                <Button variant="festival" size="sm" className="w-full">
+                  Réserver
+                </Button>
+              </Link>
             </div>
           </div>
         )}
