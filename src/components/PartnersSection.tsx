@@ -2,40 +2,40 @@ const PartnersSection = () => {
   const partners = [
     {
       name: "Air Côte d'Ivoire",
-      category: "Transport Officiel"
+      logo: "ACI"
     },
     {
       name: "BCEAO",
-      category: "Partenaire Bancaire"
+      logo: "BCEAO"
     },
     {
       name: "Orange CI",
-      category: "Partenaire Télécom"
+      logo: "Orange"
     },
     {
       name: "SODECI",
-      category: "Partenaire Logistique"
+      logo: "SODECI"
     },
     {
       name: "Groupe CFAO",
-      category: "Partenaire Distribution"
+      logo: "CFAO"
     },
     {
       name: "Nestlé CI",
-      category: "Partenaire Alimentaire"
+      logo: "Nestlé"
     },
     {
       name: "Jumia Food",
-      category: "Partenaire Digital"
+      logo: "Jumia"
     },
     {
       name: "Total Energies CI",
-      category: "Partenaire Énergie"
+      logo: "Total"
     }
   ];
 
   return (
-    <section className="py-20 bg-festival-grey-light">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -48,28 +48,20 @@ const PartnersSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto items-center">
           {partners.map((partner, index) => (
             <div 
               key={index} 
-              className="flex flex-col items-center justify-center p-6 bg-white rounded-lg hover:shadow-card transition-all duration-300 hover:-translate-y-1"
+              className="flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
             >
-              <div className="w-full h-16 bg-festival-grey-light rounded-lg flex items-center justify-center mb-3">
-                <span className="text-2xl font-bold text-festival-grey">
-                  {partner.name.split(' ').map(word => word[0]).join('')}
-                </span>
+              <div className="text-3xl font-bold text-festival-green">
+                {partner.logo}
               </div>
-              <h3 className="font-semibold text-foreground text-center text-sm mb-1">
-                {partner.name}
-              </h3>
-              <p className="text-xs text-festival-grey text-center">
-                {partner.category}
-              </p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <p className="text-festival-grey mb-4">
             Vous souhaitez devenir partenaire du Festival des Pâtes d'Abidjan ?
           </p>
